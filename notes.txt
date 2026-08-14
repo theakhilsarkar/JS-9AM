@@ -1,0 +1,66 @@
+Programming ?
+
+java script is a Programming language 
+
+Programming = ?
+program = ?
+
+computer machine binary language (0,1)human kese ?
+
+Programming language 
+
+code Programming
+runing, eating, singing, program = code(set of instructions)
+open vs code -> compiler(code -> binary) -> machine 
+JS -> browser(compiler)
+Chrome - V8 Engine
+c language, c++, java
+language ? interaction
+
+welcome : .; "" JS
+
+sanskrit -> hindi ?
+
+book - theory
+
+input -> compiler(software) -> binary(machine) -> process -> output(binary) -> compiler(binary to human) -> output.
+
+/// JAVASCRIPT - web interactive(two way communication) static(unchange) vs dynamic(change)
+
+// JAVASCRIPT is brain of the website.
+
+// color ui - 0
+// UI - terminal 
+
+// JS run -> browser -> html
+
+// document = index.html write "message"
+
+// log = message 
+
+// 37 line of code 
+
+// compiler - syntax error with line no.
+console.log(age) --> 16 printf = console.log
+16
+16+=2
+if(age>18)
+{
+    console.log(age) ->> 18
+    to -> home
+}
+else
+{
+    alert(your....)
+}
+
+api (server data)
+conosle.log(data) -> null 
+nothing 
+
+next lecture 
+
+889-0 -> otp 
+34567890 
+
+
