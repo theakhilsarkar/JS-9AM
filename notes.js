@@ -42,3 +42,15 @@
 // keywords to declarre variable in js, let and const
 // c,java,php.... ;
 
+// variable, if,if else, else if, nested if else, switch case, loop...
+
+// beginner - variable,datatype,loop,conditional
+// intermediate - custom datatypes , array, functions, oop
+// advance - DSA, advance functions and library,frameworks - react js, next js, 
+
+// System Design
+// C#, .NET, Java, Python...
+
+
+// function - function is reuseable block of code.
+

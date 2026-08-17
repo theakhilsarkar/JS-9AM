@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function is reuseable block of code which is used to define process/any feature. function execute only when we call it.
+
+      // if we want to pass value in function from outside the function, use parameter
+
+      // wap to print multiplaction table of 7.
+      // wap to print multiplaction table of 8.
+      // wap to print multiplaction table of 97.
+      // wap to print multiplaction table of 324.
+      // wap to print multiplaction table of 3.
+
+      function table(num) {
+        for (let i = 1; i <= 10; i++) {
+          console.log(num + " x " + i + " = " + num * i);
+        }
+        console.log("\n");
+      }
+
+      table(7);
+      table(17);
+
+      // wap to find max from 3 number using nested if else using function.
+      function maxFrom3(a, b, c) {
+        if (a > b) {
+          if (a > c) {
+            console.log("a is max");
+          } else {
+            console.log("c is max");
+          }
+        } else {
+          if (b > c) {
+            console.log("b is max");
+          } else {
+            console.log("c is max");
+          }
+        }
+      }
+
+      maxFrom3(23, 465, 13);
+      maxFrom3(45, 67, 146);
+    </script>
+  </body>
+</html>
