@@ -68,3 +68,14 @@
 
 // when we call function into another function. its called nested function
 // when we call function into same function. recursion == loop
+
+// user define -> normal function(function keyword), arrow function, anonymas function(process store,send,return). Imediate invoked function expression
+// pre define -
+
+// (function () {
+//   console.log("function called ...");
+// })();
+
+// (
+
+// )();
