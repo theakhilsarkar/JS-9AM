@@ -8,12 +8,13 @@
 
 // undefined - not defined/
 
-// const arr = [3, 5, 6, 7];
+// const arr = [1,2,45,12];
 
-// console.log(arr[0]);
-// console.log(arr[1]);
+// console.log(arr[0]); --> 1
+// console.log(arr[1]); --> 2
 // console.log(arr[2]);
-// console.log(arr[3]);
+// console.log(arr[3]); --> 12
+// console.log(arr[4]); --> undefined
 
 // for (let i = 0; i <= 3; i++) {
 //   console.log(arr[i]);
