@@ -32,7 +32,7 @@ console.log("Before - " + arr);
 
 // arr.
 
-console.log("After - " + arr);
+// console.log("After - " + arr);
 
 // const nums = [1, 2, 3];
 
@@ -44,4 +44,4 @@ console.log("After - " + arr);
 // array with function
 // methods
 
-// 100.
+// 
