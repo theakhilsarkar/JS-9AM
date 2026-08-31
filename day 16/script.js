@@ -40,6 +40,6 @@
 //   document.body.style.backgroundColor = "green";
 // });
 
-
 // button -> press -> body bg change
 // every click -> random color
+
