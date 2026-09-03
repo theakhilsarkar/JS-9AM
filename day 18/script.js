@@ -53,3 +53,4 @@ const btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
   alert(input.value); // to fetch value from input field, user .value property.
 });
+
