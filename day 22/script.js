@@ -41,7 +41,7 @@
 // // KBC
 // // QUIZ APP -
 
-// // create a quiz app of 10 random mcq type questions. each question should be display for 60 seconds, after 60 second it should be change to next question. count user's mark while attempting test and show at the end of quiz. and show excellent, good, average, poor result based on mark.
+// create a quiz app of 10 random mcq type questions. each question should be display for 60 seconds, after 60 second it should be change to next question. count user's mark while attempting test and show at the end of quiz. and show excellent, good, average, poor result based on mark.
 
 // // create a digital clock where showcase current time and date.
 
