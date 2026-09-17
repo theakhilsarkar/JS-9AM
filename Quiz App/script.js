@@ -94,18 +94,61 @@ const next_question_btn = document.getElementById("next-question-btn");
 const start_quiz_btn = document.getElementById("start-btn");
 const quiz_container = document.getElementById("quiz-container");
 
+const quiz_result = document.getElementById("quiz-result");
+const quiz_mark = document.getElementById("quiz-mark");
+const quiz_status = document.getElementById("quiz-status");
+
 let currentQuestionIndex = -1;
 let timerId = 0;
+const answers = [];
+let score = 0;
 
 const displayQuestion = () => {
+  if (option_A_btn.checked) {
+    answers.push(0);
+  } else if (option_B_btn.checked) {
+    answers.push(1);
+  } else if (option_C_btn.checked) {
+    answers.push(2);
+  } else if (option_D_btn.checked) {
+    answers.push(3);
+  }
+
+  option_A_btn.checked = false;
+  option_B_btn.checked = false;
+  option_C_btn.checked = false;
+  option_D_btn.checked = false;
+
   // mark calculation & quiz end on last question
   if (currentQuestionIndex >= questionsList.length - 1) {
+    for (let i = 0; i < answers.length; i++) {
+      if (answers[i] == questionsList[i].answer) {
+        score++;
+      }
+    }
+
     alert("Quiz Ended !");
+    quiz_container.className = "d-none";
+    quiz_result.className = "container my-4";
+    quiz_mark.textContent = score + "/" + questionsList.length;
+    const percentage = (score * 100) / questionsList.length;
+
+    if (percentage >= 90) {
+      quiz_status.textContent = "Excellent";
+    } else if (percentage >= 80) {
+      quiz_status.textContent = "Good";
+    } else if (percentage >= 70) {
+      quiz_status.textContent = "Average";
+    } else if (percentage >= 60) {
+      quiz_status.textContent = "Poor";
+    } else if (percentage < 60) {
+      quiz_status.textContent = "Failed";
+    }
     return;
   }
 
   // timer and next question after timer end.
-  let seconds = 10;
+  let seconds = 60;
   timerId = setInterval(() => {
     timer_counter.textContent = seconds;
     if (seconds > 0) {
