@@ -76,19 +76,19 @@ const questionsList = [
 ];
 
 const question_index = document.getElementById("question-index");
-const question = document.getElementById("question");
-
-const option_A_text = document.getElementById("option-a-text");
-const option_B_text = document.getElementById("option-b-text");
-const option_C_text = document.getElementById("option-c-text");
-const option_D_text = document.getElementById("option-d-text");
+const question = document.ge
 
 const option_A_btn = document.getElementById("option-a-btn");
 const option_B_btn = document.getElementById("option-b-btn");
 const option_C_btn = document.getElementById("option-c-btn");
 const option_D_btn = document.getElementById("option-d-btn");
 
-const timer_counter = document.getElementById("timer-count");
+const timer_counter = document.getElementById("timer-count");tElementById("question");
+
+const option_A_text = document.getElementById("option-a-text");
+const option_B_text = document.getElementById("option-b-text");
+const option_C_text = document.getElementById("option-c-text");
+const option_D_text = document.getElementById("option-d-text");
 const next_question_btn = document.getElementById("next-question-btn");
 
 const start_quiz_btn = document.getElementById("start-btn");
@@ -104,6 +104,7 @@ const answers = [];
 let score = 0;
 
 const displayQuestion = () => {
+  
   if (option_A_btn.checked) {
     answers.push(0);
   } else if (option_B_btn.checked) {
@@ -146,7 +147,7 @@ const displayQuestion = () => {
     }
     return;
   }
-
+  
   // timer and next question after timer end.
   let seconds = 60;
   timerId = setInterval(() => {
