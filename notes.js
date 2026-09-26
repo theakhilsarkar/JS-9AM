@@ -46,11 +46,19 @@
 
 // beginner - variable,datatype,loop,conditional
 // intermediate - custom datatypes , array, functions, oop
-// advance - DSA, advance functions and library,frameworks - react js, next js, 
+// advance - DSA, advance functions and library,frameworks - react js, next js,
 
 // System Design
 // C#, .NET, Java, Python...
 
-
 // function - function is reuseable block of code.
 
+// const arr = ["apple", "mango", "pineapple"];
+
+// console.log(arr.includes("apple"));
+
+// const arr = "apple mango pineaple";
+// console.log(arr.includes("mango"));
+
+// const name = "amala candy";
+// console.log(name.includes("hello"));

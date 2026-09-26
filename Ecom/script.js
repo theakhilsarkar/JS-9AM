@@ -12,12 +12,13 @@ const editProductBtn = document.getElementById("edit-product-btn");
 
 const inputSearch = document.getElementById("input-search");
 const searchBtn = document.getElementById("search-btn");
+const resetBtn = document.getElementById("reset-btn");
 
 const productTbody = document.getElementById("product-tbody");
 
 // fetch from input -> store local storage -> fetch from local storage -> display
 
-const allProducts = JSON.parse(localStorage.getItem("products")) || [];
+let allProducts = JSON.parse(localStorage.getItem("products")) || [];
 
 const handleProductListing = () => {
   const product = {
@@ -135,7 +136,31 @@ const setProductForEdit = (i) => {
   editProductBtn.className = "btn btn-warning";
 };
 
+const searchProduct = () => {
+  allProducts = JSON.parse(localStorage.getItem("products")) || [];
+  const search = inputSearch.value;
+  allProducts = allProducts.filter(
+    (product) =>
+      product.name.toLowerCase() == search.toLowerCase() ||
+      product.name.toLowerCase().includes(search.toLowerCase()) ||
+      product.category.toLowerCase().includes(search.toLowerCase()),
+  );
+  displayProducts();
+};
+
+const handleReset = () => {
+  inputSearch.value = "";
+  allProducts = JSON.parse(localStorage.getItem("products")) || [];
+  displayProducts();
+};
+
+searchBtn.addEventListener("click", searchProduct);
+resetBtn.addEventListener("click", handleReset);
 displayProducts();
 
 // name,defination,example - 1 time.
 // push,pop,shift,unshift,slice,splice,filter,sort,includes,indexOf,findIndex,forEach,map
+
+
+// add,delete,edit/2 display, localstorage
+// search - name,categoru, small,cap,half spells.
