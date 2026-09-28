@@ -16,6 +16,8 @@ const resetBtn = document.getElementById("reset-btn");
 
 const productTbody = document.getElementById("product-tbody");
 
+const priceFilter = document.getElementById("price-filter");
+
 // fetch from input -> store local storage -> fetch from local storage -> display
 
 let allProducts = JSON.parse(localStorage.getItem("products")) || [];
@@ -161,6 +163,18 @@ displayProducts();
 // name,defination,example - 1 time.
 // push,pop,shift,unshift,slice,splice,filter,sort,includes,indexOf,findIndex,forEach,map
 
-
 // add,delete,edit/2 display, localstorage
 // search - name,categoru, small,cap,half spells.
+
+priceFilter.onchange = () => {
+  allProducts = JSON.parse(localStorage.getItem("products")) || [];
+  console.log(priceFilter.value);
+  if (priceFilter.value == "max") {
+    allProducts.sort((a, b) => b.price - a.price);
+  } else if (priceFilter.value == "min") {
+    allProducts.sort((a, b) => a.price - b.price);
+  } else {
+    allProducts = JSON.parse(localStorage.getItem("products")) || [];
+  }
+  displayProducts();
+};
