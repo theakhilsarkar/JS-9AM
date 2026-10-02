@@ -59,11 +59,11 @@
 // done 1. fetch products from api and display in grid view.
 // done 2. add to cart - add product in localstorage for cart handling.
 // done 3. additional page/new page = show all cart products by view cart button
-// todo 4. unique products display
-// todo 5. increment/decrement in products quanitity
-// todo 6. total calculation with discount and 18% GST + increment/decrement quantity.
-// todo 7. if decrement in products quanitity after 1 will remove product.
-// todo 8. increment in products quanitity not allow more than stock.
+// done 4. unique products display
+// done 5. increment/decrement in products quanitity
+// done 6. total calculation with discount and 18% GST + increment/decrement quantity.
+// done 7. if decrement in products quanitity after 1 will remove product.
+// done 8. increment in products quanitity not allow more than stock.
 
 const productContainer = document.getElementById("products-container");
 
@@ -111,8 +111,21 @@ const addToCart = (id) => {
   fetch("https://dummyjson.com/products/" + id)
     .then((res) => res.json())
     .then((data) => {
-      cartList.push(data);
-      localStorage.setItem("carts", JSON.stringify(cartList));
+      // is entry is unique or not?
+      let isRepeat = false;
+      cartList.forEach((element) => {
+        if (element.id == data.id) {
+          element.qty++;
+          localStorage.setItem("carts", JSON.stringify(cartList));
+          isRepeat = true;
+        }
+      });
+      console.log("-------------");
+      if (isRepeat == false) {
+        data.qty = 1;
+        cartList.push(data);
+        localStorage.setItem("carts", JSON.stringify(cartList));
+      }
     });
 
   alert("Add to cart successfully !");
