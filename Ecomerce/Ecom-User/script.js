@@ -67,12 +67,16 @@
 
 const productContainer = document.getElementById("products-container");
 
-const fetchProducts = () => {
-  fetch("https://dummyjson.com/products")
-    .then((res) => res.json())
-    .then((data) => {
-      displayProducts(data.products);
-    });
+const fetchProducts = async () => {
+  // fetch("https://dummyjson.com/products")
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     displayProducts(data.products);
+  //   });
+
+  const res = await fetch("https://dummyjson.com/products");
+  const data = await res.json();
+  displayProducts(data.products);
 };
 
 const displayProducts = (products) => {
@@ -132,3 +136,5 @@ const addToCart = (id) => {
 };
 
 fetchProducts();
+
+// ecom, book, customer, emp, food order, booking.
