@@ -62,3 +62,5 @@
 
 // const name = "amala candy";
 // console.log(name.includes("hello"));
+
+// IIFE - Imediate Invoked Function Expression 
